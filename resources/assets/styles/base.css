@@ -11,10 +11,15 @@ nav {
   .mobile {
     .active {
       a {
-        @apply border-c-blue-200 bg-c-blue-100 text-c-blue-200;
+        @apply text-c-blue-400 font-semibold;
         &:hover {
-          @apply border-c-blue-200 bg-c-blue-100 text-c-blue-200;
+          @apply text-c-blue-200;
         }
+      }
+    }
+    .request-demo {
+      a {
+        @apply bg-white rounded-full inline-block px-12 my-6 font-semibold text-c-blue-300 py-3 text-lg;
       }
     }
   }

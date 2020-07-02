@@ -22,7 +22,7 @@
 
       <div class="-mr-2 flex items-center sm:hidden">
         <!-- Mobile menu button -->
-        <button @click="open = !open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Main menu" aria-expanded="false">
+        <button @click="open = !open" class="inline-flex items-center justify-center p-2 rounded-md text-c-blue-300 bg-c-blue-100 hover:text-c-blue-400 focus:outline-none transition duration-150 ease-in-out" aria-label="Main menu" aria-expanded="false">
           <!-- Icon when menu is closed. -->
           <svg :class="{'hidden': open, 'block': !open }" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -41,12 +41,12 @@
 
     Menu open: "block", Menu closed: "hidden"
   -->
-  <div :class="{'block': open, 'hidden': !open }" class="mobile hidden sm:hidden">
-    <div @click.away="open = false" class="pt-2 pb-3">
-      <ul>
+  <div :class="{'block': open, 'hidden': !open }" class="mobile hidden bg-c-blue-300 sm:hidden">
+    <div @click.away="open = false" class="py-4">
+      <ul class="flex flex-col divide-y divide-c-blue-100 divide-opacity-50 px-6">
         @foreach ($navigation as $item)
-          <li class="group relative {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }}">
-            <a class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-100 hover:border-gray-400 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out" href="{{ $item->url }}">
+          <li class="group relative text-center {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }}">
+            <a class="block py-4 text-xl text-white tracking-wider hover:font-semibold focus:outline-none transition duration-150 ease-in-out" href="{{ $item->url }}">
               {{ $item->label }}
             </a>
           </li>

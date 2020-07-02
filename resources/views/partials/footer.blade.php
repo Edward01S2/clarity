@@ -3,7 +3,7 @@
     <div class="flex flex-col items-center space-y-6 pt-12 pb-8 border-b border-c-gray-100 md:flex-row md:space-y-0 md:items-center md:justify-between lg:pt-16 lg:pb-12">
 
       <div class="flex-shrink-0 flex items-center">
-        <a href="{{ home_url('/') }}">
+        <a class="hover:opacity-75" href="{{ home_url('/') }}">
           <img class="block h-12 w-auto" src="{!! $logo['url'] !!}" alt="{{ $siteName }}" />
         </a>
         {{-- <img class="block h-12 w-auto" src="{!! $mobile_logo['url'] !!}" alt="{{ $siteName }}" /> --}}
