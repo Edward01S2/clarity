@@ -1,0 +1,151 @@
+.validation_error {
+  @apply text-red-600 pb-4;
+}
+
+.validation_message {
+  @apply text-red-600 pt-1;
+}
+
+.gform_validation_container {
+  @apply hidden;
+}
+
+.gfield_visibility_hidden {
+  @apply hidden;
+}
+
+.gform_ajax_spinner {
+  @apply hidden;
+}
+
+.gfield_error {
+  .validation_message {
+    @apply hidden;
+  }
+  .ginput_container input[type=text], .ginput_container input[type=email], textarea, select {
+    @apply border-2 border-red-400 box-border !important;
+  }
+  .ginput_container_consent {
+    input[type=checkbox] {
+      @apply border-2 border-red-400 box-border !important;
+    }
+  }
+}
+
+.gfield_description {
+  @apply hidden;
+}
+
+.gform_fields {
+  @apply list-none !important;
+}
+
+.hidden_label {
+  .gfield_label {
+    @apply hidden;
+  }
+}
+
+.gform_wrapper {
+  @apply w-full text-left;
+}
+.gfield {
+  @apply mb-4;
+}
+.ginput_container input, .ginput_container select {
+  @apply w-full py-3 px-4 text-base;
+  &::placeholder {
+    @apply opacity-75 tracking-wide text-base;
+  }
+  &:focus {
+    @apply outline-none;
+  }
+}
+.ginput_container textarea {
+  @apply h-32 w-full py-3 px-4;
+  @screen md {
+    @apply h-48;
+  }
+  @screen lg {
+    @apply h-56;
+  }
+  @screen xl {
+    @apply h-64;
+  }
+}
+.gform_button {
+  @apply w-full py-3 block text-base tracking-wider leading-normal;
+  &:hover {
+    @apply cursor-pointer;
+  }
+}
+.gfield_required {
+  @apply hidden;
+}
+
+#gform_1 {
+  .gform_footer {
+    @screen md {
+      @apply flex justify-center
+    }
+  }
+  .gform_body {
+    @screen md {
+      @apply mb-4;
+    }
+  }
+  .gform_button {
+    @apply rounded-full text-white bg-c-blue-300 border-2 border-c-blue-300 font-semibold;
+    &:hover {
+      @apply bg-c-blue-100 text-c-blue-300;
+    }
+    @screen md {
+      @apply w-1/3;
+    }
+  }
+  .gform_fields {
+    @apply flex flex-col;
+    @screen md {
+      @apply flex-row justify-center;
+    }
+    > * + * {
+      @apply mb-4;
+      @screen md {
+        @apply mb-0 ml-4;
+      }
+    }
+  }
+  .gfield {
+    @screen md {
+      @apply w-1/3;
+    }
+  }
+}
+
+#gform_2 {
+  .gform_button {
+    @apply rounded-full text-white bg-c-blue-300 border-2 border-white font-semibold;
+    &:hover {
+      @apply bg-white text-c-blue-300 transition duration-300;
+    }
+    @screen md {
+      @apply w-1/3 mx-auto;
+    }
+  }
+  .gform_fields {
+    > * + * {
+      @screen md {
+        @apply mb-6
+      }
+    }
+  }
+  .ginput_container input, .ginput_container textarea {
+    /* @apply w-full py-3 px-4 text-base;
+    &::placeholder {
+      @apply opacity-75 tracking-wide text-base;
+    } */
+    @screen md {
+      @apply text-lg;
+    }
+  }
+}

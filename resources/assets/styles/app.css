@@ -1,0 +1,15 @@
+/* External Dependencies */
+@import "lity/dist/lity.css";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+
+@import "tailwindcss/base";
+@import "./base.css";
+
+@import "tailwindcss/components";
+@import "./components.css";
+@import "./forms.css";
+
+@import "tailwindcss/utilities";
+@import "./utilities.css";

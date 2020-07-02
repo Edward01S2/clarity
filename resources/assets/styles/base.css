@@ -1,0 +1,38 @@
+html {
+  @apply font-inter;
+  /* scroll-behavior: smooth; */
+}
+
+a {
+  @apply cursor-pointer transition duration-300;
+}
+
+nav {
+  .mobile {
+    .active {
+      a {
+        @apply border-c-blue-200 bg-c-blue-100 text-c-blue-200;
+        &:hover {
+          @apply border-c-blue-200 bg-c-blue-100 text-c-blue-200;
+        }
+      }
+    }
+  }
+  .desktop {
+    .active {
+      @apply border-c-blue-200;
+      &:hover {
+        @apply border-c-blue-200;
+      }
+    }
+    .request-demo {
+      @apply inline-flex my-3 border-2 border-c-blue-300 text-c-blue-300 rounded-full px-6 py-2 transition duration-300;
+      &:hover {
+        @apply bg-c-blue-300 text-white;
+      }
+      @screen lg {
+        @apply my-4;
+      }
+    }
+  }
+}

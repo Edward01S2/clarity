@@ -1,0 +1,130 @@
+/* Slick Slider  */
+
+.slick-dots li button:before {
+  @apply text-5xl text-c-gray-200;
+}
+
+#feat-slider {
+  .slick-dotted.slick-slider {
+    @apply mb-0;
+  }
+  .slick-dots .slick-active button:before {
+    @apply text-c-blue-300;
+  }
+}
+
+.quote-slider {
+  @apply mb-0 !important;
+  .slick-dots {
+    @apply relative bottom-0;
+  }
+  .slick-dots .slick-active button:before {
+    @apply text-white opacity-100;
+  }
+}
+
+.quote-prev, .quote-next {
+  @apply absolute z-30;
+  top: calc(50% - 2rem);
+  &:focus, &:active {
+    @apply outline-none
+  }
+  &:hover {
+    @apply opacity-50 transition duration-300;
+  }
+}
+
+.quote-arrow {
+  @apply w-8 h-8 fill-current text-white;
+}
+
+.quote-prev {
+  @apply left-0;
+}
+
+.quote-next {
+  @apply right-0;
+}
+
+.how-it-works {
+  .contact {
+    h1 {
+      @apply text-c-blue-300 font-normal;
+      span {
+        @apply font-semibold;
+      }
+      @screen xl {
+        @apply text-5xl;
+      }
+    }
+  }
+}
+
+.customer-dots {
+  .slick-dots {
+    @apply relative bottom-0 flex items-center justify-center !important;
+    li {
+      @apply w-auto h-auto;
+        button {
+          @apply text-xs leading-normal text-c-blue-350 w-auto h-auto flex items-center transition duration-300;
+          &:before {
+            content: '';
+          }
+          &:hover {
+            @apply text-gray-500;
+            .dot-circle {
+              @apply bg-gray-500 transition duration-300;
+            }
+            img {
+              @apply opacity-75 transition duration-300;
+            }
+          }
+          @screen md {
+            @apply text-base mx-4;
+          }
+          @screen xl {
+            @apply text-lg mx-8
+          }
+      }
+    }
+    .slick-active {
+      button {
+        @apply text-white;
+        .dot-circle {
+          @apply bg-white;
+        }
+      }
+    }
+  }
+}
+
+#customer-slides {
+  @apply mb-0;
+}
+
+.work-item {
+  &:before {
+    @apply block h-36;
+    margin: -9rem 0 0;
+    content: "";
+  }
+}
+
+.work-nav {
+  .active {
+    @apply bg-c-blue-350;
+    &:after {
+      @apply mt-6;
+      content:'';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      width: 0;
+      height: 0;
+      border-top: solid 10px #3a86ff;
+      border-left: solid 10px transparent;
+      border-right: solid 10px transparent;
+    }
+  }
+}
