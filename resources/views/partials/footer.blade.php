@@ -19,7 +19,7 @@
       
       <div class="flex space-x-8 md:space-x-4 lg:space-x-8 xl:space-x-16">
         @foreach($social as $x)
-          <a href="{!! $x['url'] !!}">
+          <a href="{!! $x['url'] !!}" target="_blank">
             <img class="h-8 w-8 hover:scale-105 transform transition duration-500" src="{!! $x['icon']['url'] !!}" alt="">
           </a>
         @endforeach
