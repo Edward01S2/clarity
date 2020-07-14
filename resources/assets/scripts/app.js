@@ -231,6 +231,14 @@ $('#tour').on('click', function(e) {
   gsap.to(window, {duration: 1, scrollTo: {y: topY}});
 })
 
+$('#hero-scroll').on('click', function(e) {
+  e.preventDefault();
+  var $this = $(this),
+  href = $this.attr("href"),
+  topY = $(href).offset().top;
+  gsap.to(window, {duration: 1, scrollTo: {y: topY}});
+})
+
 $('#return-top').on('click', function(e) {
   e.preventDefault();
   var $this = $(this),

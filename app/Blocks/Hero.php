@@ -80,10 +80,11 @@ class Hero extends Block
         return [
             'title' => get_field('title'),
             'subtitle' => get_field('subtitle'),
-            'link' => get_field('link'),
-            'video_poster' => get_field('video poster'),
-            'video' => get_field('video url'),
-            'bg_photos' => get_field('bg photos'),
+            'links' => get_field('links'),
+            'bg' => get_field('bg'),
+            // 'video_poster' => get_field('video poster'),
+            // 'video' => get_field('video url'),
+            // 'bg_photos' => get_field('bg photos'),
             'comp_text' => get_field('companies text'),
             'companies' => get_field('companies'),
         ];
@@ -111,10 +112,13 @@ class Hero extends Block
         $hero
             ->addText('title')
             ->addText('subtitle')
-            ->addLink('link')
-            ->addImage('video poster')
-            ->addUrl('video url')
-            ->addGallery('bg photos')
+            ->addRepeater('links')
+                ->addLink('link')
+            ->endRepeater()
+            ->addImage('bg')
+            // ->addImage('video poster')
+            // ->addUrl('video url')
+            // ->addGallery('bg photos')
             ->addText('companies text')
             ->addRepeater('companies')
                 ->addImage('logo')

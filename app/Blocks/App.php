@@ -5,14 +5,14 @@ namespace App\Blocks;
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class SplitHero extends Block
+class App extends Block
 {
     /**
      * The display name of the block.
      *
      * @var string
      */
-    public $name = 'SplitHero';
+    public $name = 'App';
 
     /**
      * The description of the block.
@@ -78,12 +78,8 @@ class SplitHero extends Block
     public function with()
     {
         return [
+            'icon' => get_field('icon'),
             'title' => get_field('title'),
-            'content' => get_field('content'),
-            'link' => get_field('link'),
-            'poster' => get_field('poster'),
-            'video' => get_field('video url'),
-            'app' => get_field('App Download'),
             'download' => get_field('App', 'options'),
         ];
     }
@@ -105,21 +101,22 @@ class SplitHero extends Block
      */
     public function fields()
     {
-        $splitHero = new FieldsBuilder('split_hero');
+        $app = new FieldsBuilder('app');
 
-        $splitHero
-        ->addTab('left')
-            ->addText('title')
-            ->addTextarea('content', [
-                'rows' => 2,
-            ])
-            ->addLink('link')
-            ->addTrueFalse('App Download')
-        ->addTab('right')
-            ->addImage('poster')
-            ->addUrl('video url');
+        $app
+            ->addImage('icon')
+            ->addText('title');
 
-        return $splitHero->build();
+        return $app->build();
     }
 
+    // /**
+    //  * Return the items field.
+    //  *
+    //  * @return array
+    //  */
+    // public function items()
+    // {
+    //     return get_field('items') ?: [];
+    // }
 }

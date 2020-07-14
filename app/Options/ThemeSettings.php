@@ -121,7 +121,12 @@ class ThemeSettings extends Field
                 ->addRepeater('Social')
                     ->addImage('icon')
                     ->addUrl('url')
-                ->endRepeater();
+                ->endRepeater()
+            ->addTab('App')
+                ->addRepeater('App')
+                ->addImage('icon')
+                ->addUrl('url')
+            ->endRepeater();
 
         return $themeSettings->build();
     }

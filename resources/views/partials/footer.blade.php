@@ -25,7 +25,7 @@
         @endforeach
       </div>
 
-      <a id="return-top" class="px-1 pt-1 text-base font-semibold leading-5 text-c-blue-300 hover:text-gray-700 focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out md:text-sm lg:text-base {{ $item->classes ?? '' }}" href="#nav">
+      <a id="return-top" class="px-1 pt-1 text-base font-semibold leading-5 text-c-blue-300 hover:text-gray-700 focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out md:text-sm md:hidden lg:block lg:text-base {{ $item->classes ?? '' }}" href="#nav">
         Back to Top
       </a>
 

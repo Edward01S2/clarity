@@ -24,6 +24,7 @@ module.exports = {
     extend: {
       colors: {
         'c-blue': {
+          50 : '#f3faff',
           100 : '#e9f7ff',
           150 : '#e4f4ff',
           200 : '#00a6fb',
@@ -34,6 +35,12 @@ module.exports = {
         'c-gray' : {
           100: '#e5e5e5',
           200: '#666666',
+        },
+        'c-purple' : {
+          100: '#7209B7',
+        },
+        'c-pink' : {
+          100 : '#FF4181',
         }
       },
       fontFamily: {

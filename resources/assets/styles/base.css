@@ -11,7 +11,7 @@ nav {
   .mobile {
     .active {
       a {
-        @apply text-c-blue-400 font-semibold;
+        @apply text-c-purple-100 font-semibold;
         &:hover {
           @apply text-c-blue-200;
         }
@@ -37,6 +37,12 @@ nav {
       }
       @screen lg {
         @apply my-4;
+      }
+    }
+    .request-demo.active {
+      @apply bg-c-blue-300 text-white;
+      &:hover {
+        @apply bg-white text-c-blue-300;
       }
     }
   }

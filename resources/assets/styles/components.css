@@ -112,8 +112,8 @@
 
 .work-nav {
   .active {
-    @apply bg-c-blue-350;
-    &:after {
+    @apply bg-white text-c-blue-300;
+    /* &:after {
       @apply mt-6;
       content:'';
       position: absolute;
@@ -125,6 +125,17 @@
       border-top: solid 10px #3a86ff;
       border-left: solid 10px transparent;
       border-right: solid 10px transparent;
+    } */
+  }
+}
+
+/* For Businessess Page */
+
+.for-businesses {
+  .contact {
+    @apply bg-c-blue-50;
+    h1 {
+      @apply text-c-blue-300;
     }
   }
 }

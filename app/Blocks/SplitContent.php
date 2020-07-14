@@ -80,9 +80,7 @@ class SplitContent extends Block
         return [
             'title' => get_field('title'),
             'content' => get_field('content'),
-            'link' => get_field('link'),
-            'poster' => get_field('poster'),
-            'video' => get_field('video url'),
+            'items' => get_field('items'),
         ];
     }
 
@@ -106,15 +104,19 @@ class SplitContent extends Block
         $splitContent = new FieldsBuilder('split_content');
 
         $splitContent
-            ->addTab('left')
+            ->addText('title')
+            ->addText('content')
+            ->addRepeater('items', [
+                'layout' => 'block'
+            ])
                 ->addText('title')
-                ->addTextarea('content', [
+                ->addTextarea('gradient', [
                     'rows' => 2,
                 ])
+                ->addImage('bg')
+                ->addImage('icon')
                 ->addLink('link')
-            ->addTab('right')
-                ->addImage('poster')
-                ->addUrl('video url');
+            ->endRepeater();
 
         return $splitContent->build();
     }

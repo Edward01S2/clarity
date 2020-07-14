@@ -80,6 +80,8 @@ class Works extends Block
         return [
             // 'items' => $this->items(),
             'items' => $this->urlConvert(),
+            'logo' => get_field('logo'),
+            'bg' => get_field('BG'),
         ];
     }
 
@@ -103,6 +105,10 @@ class Works extends Block
         $works = new FieldsBuilder('works');
 
         $works
+            ->addImage('logo')
+            ->addTextarea('BG', [
+                'rows' => 2,
+            ])
             ->addRepeater('items', [
                 'layout' => 'block',
                 'collapsed' => 'title'
