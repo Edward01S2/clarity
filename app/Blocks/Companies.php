@@ -5,14 +5,14 @@ namespace App\Blocks;
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class Quotes extends Block
+class Companies extends Block
 {
     /**
      * The display name of the block.
      *
      * @var string
      */
-    public $name = 'Quotes';
+    public $name = 'Companies';
 
     /**
      * The description of the block.
@@ -79,7 +79,8 @@ class Quotes extends Block
     {
         return [
             'show' => get_field('show'),
-            'quotes' => get_field('quotes'),
+            'title' => get_field('companies text'),
+            'companies' => get_field('companies')
         ];
     }
 
@@ -100,29 +101,17 @@ class Quotes extends Block
      */
     public function fields()
     {
-        $quotes = new FieldsBuilder('quotes');
+        $companies = new FieldsBuilder('companies');
 
-        $quotes
+        $companies
             ->addTrueFalse('show')
-            ->addRepeater('quotes', [
-                'layout' => 'block'
-            ])
-                ->addText('name', [
-                    'wrapper' => [
-                        'width' => '50%'
-                    ]
-                ])
-                ->addText('company', [
-                    'wrapper' => [
-                        'width' => '50%'
-                    ]
-                ])
-                ->addTextarea('quote', [
-                    'rows' => '2',
-                ])
+            ->addText('companies text')
+            ->addRepeater('companies')
+                ->addImage('logo')
+                ->addUrl('url')
             ->endRepeater();
 
-        return $quotes->build();
+        return $companies->build();
     }
 
 }

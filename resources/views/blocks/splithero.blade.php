@@ -35,18 +35,22 @@
       </div>
 
       <div class="relative md:w-1/2">
-        <a class="group" data-lity href="{!! $video !!}">
-          <div class="bg-center bg-cover w-full h-full" style="background-image: url('{!! $poster['url'] !!}')">
-          <div class="h-full w-full absolute top-0 flex items-center justify-center">
-            <button class="p-3 rounded-full bg-white bg-opacity-25 focus:outline-none">
-              <div class="rounded-full bg-white group-hover:bg-c-blue-300 transition duration-300">
-                <div class="p-4 pr-3">
-                  <svg class="text-c-blue-300 fill-current h-12 w-12 ml-1 group-hover:text-white transition duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"/></svg>
+        @if($video)
+          <a class="group" data-lity href="{!! $video !!}">
+            <div class="bg-center bg-cover w-full h-full" style="background-image: url('{!! $poster['url'] !!}')">
+            <div class="h-full w-full absolute top-0 flex items-center justify-center">
+              <button class="p-3 rounded-full bg-white bg-opacity-25 focus:outline-none">
+                <div class="rounded-full bg-white group-hover:bg-c-blue-300 transition duration-300">
+                  <div class="p-4 pr-3">
+                    <svg class="text-c-blue-300 fill-current h-12 w-12 ml-1 group-hover:text-white transition duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"/></svg>
+                  </div>
                 </div>
-              </div>
-            </button>
-          </div>
-        </a>
+              </button>
+            </div>
+          </a>
+        @else
+          <div class="bg-center bg-cover w-full h-full" style="background-image: url('{!! $poster['url'] !!}')">
+        @endif
       </div>
 
     </div>

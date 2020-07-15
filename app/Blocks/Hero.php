@@ -115,15 +115,10 @@ class Hero extends Block
             ->addRepeater('links')
                 ->addLink('link')
             ->endRepeater()
-            ->addImage('bg')
+            ->addImage('bg');
             // ->addImage('video poster')
             // ->addUrl('video url')
             // ->addGallery('bg photos')
-            ->addText('companies text')
-            ->addRepeater('companies')
-                ->addImage('logo')
-                ->addUrl('url')
-            ->endRepeater();
 
         return $hero->build();
     }

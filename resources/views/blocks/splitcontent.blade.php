@@ -1,6 +1,6 @@
 <section>
   <div id="split-content" class="container mx-auto px-6 lg:px-8">
-    <div class="py-16 lg:py-20 xl:py-24">
+    <div class="pb-16 lg:pb-20">
       <h2 class="text-2xl text-center leading-8 font-semibold text-c-blue-400 mb-4 md:text-3xl md:leading-normal lg:text-4xl lg:mb-8 lg:leading-tight">{!! $title !!}</h2>
       <p class="text-c-gray-200 text-center mb-8 md:mb-12 xl:text-lg">{!! $content !!}</p>
       <div class="grid grid-rows-2 gap-6 md:grid-cols-2 md:grid-rows-none lg:gap-8 xl:gap-12 xl:max-w-6xl xl:mx-auto">
