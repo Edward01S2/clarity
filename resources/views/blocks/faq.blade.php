@@ -19,7 +19,7 @@
                 <svg x-show="open" class="h-5 w-5 stroke-current text-c-blue-400 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
               </button>
             </div>
-            <div x-show="open" class="relative z-20 text-c-gray-200 bg-c-blue-150 px-4 py-3 md:px-6 md:py-4 md:text-lg lg:text-xl lg:px-8 lg:py-6">
+            <div x-show="open" class="prose max-w-none relative z-20 text-c-gray-200 bg-c-blue-150 px-4 py-3 md:px-6 md:py-4 md:text-lg lg:text-xl lg:px-8 lg:py-6">
               {!! $item['answer'] !!}
             </div>
           </div>

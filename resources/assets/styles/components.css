@@ -131,11 +131,29 @@
 
 /* For Businessess Page */
 
-.for-businesses {
+.for-businesses, .for-universities {
   .contact {
     @apply bg-c-blue-50;
     h1 {
       @apply text-c-blue-300;
+    }
+  }
+}
+
+.split-section {
+  @screen lg {
+    .split-container {
+      &:first-child {
+        @apply col-span-2;
+      }
+      &:last-child {
+        .split-box {
+          @apply col-span-2;
+          img{
+            @apply object-cover w-full h-full object-center;
+          }
+        }
+      }
     }
   }
 }

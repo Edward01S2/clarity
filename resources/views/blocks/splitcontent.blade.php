@@ -3,19 +3,20 @@
     <div class="pb-16 lg:pb-20">
       <h2 class="text-2xl text-center leading-8 font-semibold text-c-blue-400 mb-4 md:text-3xl md:leading-normal lg:text-4xl lg:mb-8 lg:leading-tight">{!! $title !!}</h2>
       <p class="text-c-gray-200 text-center mb-8 md:mb-12 xl:text-lg">{!! $content !!}</p>
-      <div class="grid grid-rows-2 gap-6 md:grid-cols-2 md:grid-rows-none lg:gap-8 xl:gap-12 xl:max-w-6xl xl:mx-auto">
+
+      <div class="split-section flex flex-col space-y-8 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4 xl:gap-6">
         @foreach($items as $item)
-          <a href="{!! $item['link']['url'] !!}">
-            <div class="bg-center bg-cover rounded-lg" style="background-image:url('{!! $item['bg']['url'] !!}');">
-              <div class="text-white font-semibold text-center py-24 text-2xl tracking-wide md:py-28 lg:py-40 xl:py-48 xl:text-3xl">{!! $item['title'] !!}</div>
-              <div class="flex items-center rounded-b-lg justify-between p-4 py-6 lg:p-6 lg:py-8 xl:p-8 xl:py-10" style="{!! $item['gradient'] !!}">
-                <img class="h-8 w-auto lg:h-10 xl:h-12" src="{!! $item['icon']['url'] !!}" alt="">
-                <div>
-                  <div class="font-semibold text-c-blue-300 bg-white rounded-full border-2 border-transparent px-6 py-3 hover:bg-transparent hover:border-white hover:text-white lg:px-12 transition duration-300" href="{!! $item['link']['url'] !!}">{!! $item['link']['title'] !!}</div>
-                </div>
-              </div>
+          <div class="split-container bg-c-blue-150 rounded-lg p-8 pt-6 lg:flex lg:flex-col">
+            <img class="h-20 mb-6 mr-auto xl:h-24" src="{!! $item['icon']['url'] !!}" alt="">
+            <div class="flex flex-col space-y-8 md:grid md:grid-cols-2 md:space-y-0 md:gap-8 lg:flex-grow">
+              @foreach($item['boxes'] as $box)
+                <a class="split-box relative group" href="{!! $box['link']['url'] !!}">
+                  <img class="w-full h-auto rounded-lg group-hover:opacity-50 transition duration-300" src="{!! $box['bg']['url'] !!}" alt="">
+                  <div class="absolute inset-x-0 text-center text-white font-semibold text-3xl mb-8 bottom-0 group-hover:text-c-blue-300 transition duration-300 xl:text-4xl xl:mb-16">{!! $box['title'] !!}</div>
+                </a>
+              @endforeach
             </div>
-          </a>
+          </div>
         @endforeach
       </div>
     </div>

@@ -109,13 +109,12 @@ class SplitContent extends Block
             ->addRepeater('items', [
                 'layout' => 'block'
             ])
-                ->addText('title')
-                ->addTextarea('gradient', [
-                    'rows' => 2,
-                ])
-                ->addImage('bg')
                 ->addImage('icon')
-                ->addLink('link')
+                ->addRepeater('boxes')
+                    ->addText('title')
+                    ->addImage('bg')
+                    ->addLink('link')
+                ->endRepeater()
             ->endRepeater();
 
         return $splitContent->build();

@@ -1,3 +1,4 @@
+@if($show)
 <section>
   <div id="work-navi" class="sticky top-0 z-50" style="{!! $bg !!}">
     <div class="container mx-auto px-6 lg:px-8">
@@ -42,3 +43,5 @@
     </div>
   </div>
 </section>
+
+@endif

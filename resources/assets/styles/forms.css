@@ -122,7 +122,7 @@
   }
 }
 
-#gform_2 {
+#gform_2, #gform_3 {
   .gform_button {
     @apply rounded-full text-white bg-c-blue-300 border-2 border-white font-semibold;
     &:hover {

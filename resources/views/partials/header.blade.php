@@ -11,16 +11,16 @@
         </div>
       </div>
 
-      <div class="desktop hidden sm:flex sm:space-x-8 lg:space-x-16">
+      <div class="desktop hidden lg:flex lg:space-x-12 xl:space-x-20">
         @foreach ($navigation as $item)
-          <a class="inline-flex items-center px-1 pt-1 border-b-3 border-transparent text-sm font-semibold leading-5 text-c-blue-400 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out lg:text-base {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }}" href="{{ $item->url }}">
+          <a class="inline-flex items-center px-1 pt-1 border-b-3 border-transparent text-sm leading-5 text-c-blue-400 hover:text-c-blue-300 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out xl:text-base {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }}" href="{{ $item->url }}">
             {{ $item->label }}
           </a>
         @endforeach
       </div>
 
 
-      <div class="-mr-2 flex items-center sm:hidden">
+      <div class="-mr-2 flex items-center lg:hidden">
         <!-- Mobile menu button -->
         <button @click="open = !open" class="inline-flex items-center justify-center p-2 rounded-md text-c-blue-300 bg-c-blue-100 hover:text-c-blue-400 focus:outline-none transition duration-150 ease-in-out" aria-label="Main menu" aria-expanded="false">
           <!-- Icon when menu is closed. -->
@@ -41,7 +41,7 @@
 
     Menu open: "block", Menu closed: "hidden"
   -->
-  <div :class="{'block': open, 'hidden': !open }" class="mobile hidden bg-c-blue-300 sm:hidden">
+  <div :class="{'block': open, 'hidden': !open }" class="mobile hidden bg-c-blue-300 lg:hidden">
     <div @click.away="open = false" class="py-4">
       <ul class="flex flex-col divide-y divide-c-blue-100 divide-opacity-50 px-6">
         @foreach ($navigation as $item)

@@ -82,6 +82,7 @@ class Works extends Block
             'items' => $this->urlConvert(),
             'logo' => get_field('logo'),
             'bg' => get_field('BG'),
+            'show' => get_field('show'),
         ];
     }
 
@@ -105,6 +106,7 @@ class Works extends Block
         $works = new FieldsBuilder('works');
 
         $works
+            ->addTrueFalse('show')
             ->addImage('logo')
             ->addTextarea('BG', [
                 'rows' => 2,

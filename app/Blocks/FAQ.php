@@ -109,7 +109,7 @@ class FAQ extends Block
                 'collapsed' => 'question'
             ])
                 ->addText('question')
-                ->addText('answer')
+                ->addWysiwyg('answer')
             ->endRepeater();
 
         return $fAQ->build();
