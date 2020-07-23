@@ -3,7 +3,7 @@
     <div class="grid grid-rows-2 gap-8 py-12 md:flex md:flex-row md:space-y-0 md:py-0">
 
       <div id="split-hero-block" class="md:w-1/2 md:flex md:items-center xl:max-w-720 xl:ml-auto">
-        <div class="md:px-8 md:py-12 lg:py-20 lg:px-16 xl:p-20">
+        <div class="md:px-8 sm:py-16 md:py-12 lg:py-20 lg:px-16 xl:p-20">
           <h1 class="text-3xl text-center leading-10 font-semibold text-c-blue-400 mb-4 md:text-4xl md:text-left md:leading-10 lg:text-5xl lg:mb-8 lg:leading-tight xl:text-6xl">{!! $title !!}</h1>
           <p class="text-c-gray-200 text-center mb-8 md:text-left lg:mb-12 xl:text-lg xl:max-w-lg">{!! $content !!}</p>
           @if($link)
@@ -37,7 +37,7 @@
       <div class="relative md:w-1/2">
         @if($video)
           <a class="group" data-lity href="{!! $video !!}">
-            <div class="bg-center bg-cover w-full h-full" style="background-image: url('{!! $poster['url'] !!}')">
+            <div class="poster bg-top bg-cover w-full h-full md:bg-center" style="background-image: url('{!! $poster['url'] !!}')">
             <div class="h-full w-full absolute top-0 flex items-center justify-center">
               <button class="p-3 rounded-full bg-white bg-opacity-25 focus:outline-none">
                 <div class="rounded-full bg-white group-hover:bg-c-blue-300 transition duration-300">
@@ -49,7 +49,7 @@
             </div>
           </a>
         @else
-          <div class="bg-center bg-cover w-full h-full" style="background-image: url('{!! $poster['url'] !!}')">
+          <div class="bg-top bg-cover w-full h-full md:bg-center" style="background-image: url('{!! $poster['url'] !!}')">
         @endif
       </div>
 
