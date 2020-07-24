@@ -7,7 +7,6 @@
           <img src="{!! $logo['url'] !!}" alt="" class="block h-10 w-auto xl:h-12">
         </div>
         <div class="flex items-center space-x-8 lg:space-x-12">
-          <div class="text-white font-semibold flex-shrink-0 text-sm xl:text-base">How It Works:</div>
           <div class="py-4 text-center flex-grow lg:hidden">
             <select id="work-select" class="form-select bg-white text-c-blue-300 font-semibold px-8 w-full rounded-full focus:outline-none active:outline-none" id="step-select">
               @foreach($items as $item)
@@ -15,7 +14,8 @@
               @endforeach
             </select>
           </div>
-          <div class="work-nav hidden justify-between items-center py-6 lg:flex lg:space-x-6 xl:space-x-16">
+          <div class="work-nav hidden justify-between items-center py-6 lg:flex lg:space-x-6 xl:space-x-10">
+            <div class="text-white font-semibold flex-shrink-0 text-sm xl:text-base">How It Works:</div>
             @foreach($items as $item)
               <a class="relative text-white text-center text-sm font-semibold px-8 py-3 rounded-full hover:bg-c-blue-350 hover:text-white xl:text-base" href="#{!! $item['url'] !!}">{!! sprintf("%02d", $loop->iteration) !!}. {!! $item['title'] !!}</a>
             @endforeach
