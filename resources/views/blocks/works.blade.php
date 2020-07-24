@@ -6,7 +6,7 @@
         <div class="hidden md:block">
           <img src="{!! $logo['url'] !!}" alt="" class="block h-10 w-auto xl:h-12">
         </div>
-        <div class="flex items-center space-x-8 lg:space-x-12 xl:space-x-16">
+        <div class="flex items-center space-x-8 lg:space-x-12">
           <div class="text-white font-semibold flex-shrink-0 text-sm xl:text-base">How It Works:</div>
           <div class="py-4 text-center flex-grow lg:hidden">
             <select id="work-select" class="form-select bg-white text-c-blue-300 font-semibold px-8 w-full rounded-full focus:outline-none active:outline-none" id="step-select">
