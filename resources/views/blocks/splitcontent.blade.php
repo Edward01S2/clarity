@@ -8,7 +8,7 @@
         @foreach($items as $item)
           <div class="split-container bg-c-blue-150 rounded-lg p-8 pt-6 max-w-md mx-auto lg:max-w-none lg:mx-0 lg:flex lg:flex-col">
             <img class="h-20 mb-6 mr-auto xl:h-24" src="{!! $item['icon']['url'] !!}" alt="">
-            <div class="flex flex-col space-y-8 lg:grid lg:grid-cols-2 lg:space-y-0 lg:gap-8 lg:flex-grow">
+            <div class="split-grid flex flex-col space-y-8 lg:grid lg:grid-cols-2 lg:space-y-0 lg:gap-8 lg:flex-grow">
               @foreach($item['boxes'] as $box)
                 <a class="split-box relative group" href="{!! $box['link']['url'] !!}">
                   <img class="w-full h-auto rounded-lg transition duration-300" src="{!! $box['bg']['url'] !!}" alt="">

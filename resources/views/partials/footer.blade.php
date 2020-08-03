@@ -19,13 +19,13 @@
         @endforeach
         
         @if($social)
-        <div class="flex space-x-8 md:space-x-4 lg:space-x-8 xl:space-x-16">
-          @foreach($social as $x)
-            <a href="{!! $x['url'] !!}" target="_blank">
-              <img class="h-8 w-8 hover:scale-105 transform transition duration-500" src="{!! $x['icon']['url'] !!}" alt="">
-            </a>
-          @endforeach
-        </div>
+          <div class="flex space-x-8 md:space-x-4 lg:space-x-8 xl:space-x-16">
+            @foreach($social as $x)
+              <a href="{!! $x['url'] !!}" target="_blank">
+                <img class="h-8 w-8 hover:scale-105 transform transition duration-500" src="{!! $x['icon']['url'] !!}" alt="">
+              </a>
+            @endforeach
+          </div>
         @endif
 
         <a id="return-top" class="px-1 pt-1 text-base font-semibold leading-5 text-c-blue-300 hover:text-gray-700 focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out md:text-sm md:hidden lg:block lg:text-base {{ $item->classes ?? '' }}" href="#nav">

@@ -244,7 +244,7 @@ $('#return-top').on('click', function(e) {
   var $this = $(this),
   href = $this.attr("href"),
   topY = $(href).offset().top;
-  gsap.to(window, {duration: 1, scrollTo: {y: topY}});
+  gsap.to(window, {duration: 2, scrollTo: {y: topY}});
 })
 
 const navLinks = gsap.utils.toArray(".work-nav a");
